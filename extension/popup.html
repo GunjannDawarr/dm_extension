@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Detox</title>
+    <link rel="icon" href="assets/dmlogo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <img src="assets/dmlogo.png" alt="logo" class="logo-icon">
+                <h1>DM Detox</h1>
+            </div>
+           
+            </div>
+        </div>
+        
+        <div id="userInfoSection">
+            <div class="input-group">
+                <label for="linkedinUsername">LinkedIn Username:</label>
+                <input type="text" id="linkedinUsername" placeholder="Enter your LinkedIn username">
+            </div>
+            <div class="input-group">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+              <label for="apiProvider">API Provider:</label>
+              <select id="apiProvider">
+                <!-- <option value="groq">Groq</option> -->
+                <option value="gemini">Gemini</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="modelSelect">Model:</label>
+              <select id="modelSelect"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="apiKey">Your API Key:</label>
+                <input type="text" id="apiKey" placeholder="Enter your API key">
+            </div>
+
+            <button id="saveUserInfo">Save User Info</button>
+        </div>
+        
+        <div id="userGreeting"></div>
+        <button id="editUserInfo">Edit User Info</button>
+
+        
+
+        <input type="text" id="priorityInput" placeholder="Priority (e.g., Networking messages are my priority)">
+
+        <button id="fetchMessages" disabled>Process Your LinkedIn Messages</button>
+        
+        <div id="loader">
+            <div class="spinner"></div>
+            <span>Processing your messages...</span>
+        </div>
+        
+        <div id="error" class="notification"></div>
+        <div id="success" class="notification"></div>
+        
+        <div id="messageContainer">
+            <h2>Message Categories</h2>
+            <div id="filterOptions"></div>
+            <div id="filteredMessages"></div>
+        </div>
+        
+        <div class="version">v1.1.0</div>
+    </div>
+    
+    <script type="module" src="popup.js"></script>
+    <script type="module" src="api-selection.js"></script>
+</body>
+</html>
